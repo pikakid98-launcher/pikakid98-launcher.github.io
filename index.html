@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikakid98 Launcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            width: 64px;
+            height: 64px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="inst.png" alt="Pikakid98 Logo">
+        <h1>Pikakid98 Launcher</h1>
+    </div>
+    
+    <div id="content"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script>
+        // Function to fetch and display markdown content
+        async function loadMarkdown() {
+            const response = await fetch('page.md');
+            const text = await response.text();
+            const converter = new showdown.Converter();
+            const html = converter.makeHtml(text);
+            document.getElementById('content').innerHTML = html;
+        }
+        
+        loadMarkdown();
+    </script>
+</body>
+</html>
