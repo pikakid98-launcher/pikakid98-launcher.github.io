@@ -1,0 +1,52 @@
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #121212; /* Dark background */
+            color: #E0E0E0; /* Light text color */
+        }
+        .header {
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            width: 64px;
+            height: 64px;
+            margin-right: 10px;
+        }
+        .installer-binary-icon {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .git-icon {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            margin: 0 5px;
+        }
+        h1, h2, h3, h4, h6 {
+            color: #E0E0E0; /* Light text color */
+        }
+        a {
+            color: #1E90FF; /* Light blue color for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .disclaimer {
+            font-size: 0.9em;
+            color: #B0B0B0; /* Grey color for disclaimer */
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 1px solid #B0B0B0; /* Grey line above footer */
+            text-align: center;
+        }
+    </style>
+        <style>
+            .footer {
+                display: none; /* Hide footer if JavaScript is disabled */
+            }
